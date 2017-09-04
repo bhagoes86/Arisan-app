@@ -1,2 +1,2 @@
 # Arisan-app
-Aplikasi pengelolaan arisan, seperti bayar, dan penentuan pemenang
+Aplikasi pengelolaan arisan, seperti bayar, dan penentuan pemenang menggunakan Laravel
