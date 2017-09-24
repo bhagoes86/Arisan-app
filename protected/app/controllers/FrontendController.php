@@ -17,13 +17,13 @@ class FrontendController extends BaseController {
 		 	$aturan = array(
 		 		'nama'     => 'required',
 		 		'alamat' => 'required',
-				
+
 		 		);
 
 		 	$pesan = array(
 		 		'nama' => 'inputan nama wajib diisi.',
 		 		'alamat' => 'inputan alamat wajib diisi.',
-		 		
+
 		 		);
 
 		 	#validator
@@ -40,12 +40,12 @@ class FrontendController extends BaseController {
 		 		}
 		 		$newNo = $nomax + 1;
 		 		$anggota = new Anggota;
-	 		
+
 		 		$anggota->No        		 = $newNo;
 		 		$anggota->NamaAnggota        = Input::get('nama');
 			    $anggota->Alamat  		     = Input::get('alamat');
 			    $anggota->save();
-			    
+
 			    return Redirect::back()->with('message', 'Anggota berhasil ditambahkan');
 	}
 	}
@@ -68,7 +68,7 @@ class FrontendController extends BaseController {
 					->select('namaanggota.*')
 					->first();
 		$anggota->delete();
-		
+
 		return Redirect::back()->with('messagehapus', 'Anggota berhasil dihapus');
 	}
 
