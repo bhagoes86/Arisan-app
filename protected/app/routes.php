@@ -28,4 +28,3 @@ Route::get('log-bayar', array('as' => 'getlogbayar', 'uses' => 'FrontendControll
 Route::get('log-menang', array('as' => 'getlogmenang', 'uses' => 'FrontendController@getlogmenang'));
 
 Route::post('updatedPemenang', array('as' => 'updatedPemenang', 'uses' => 'FrontendController@updatedPemenang'));
-

@@ -33,15 +33,9 @@ class FrontendController extends BaseController {
 		 	if($validasi->fails()){
 		 		return Redirect::back()->with('gagal', 'Penambahan anggota gagal disimpan, coba cek masukan!!!')->withErrors($validasi)->withInput();
 		 	}else{
-		 		$no = Anggota::select('namaanggota.*')->limit(1)->orderby('namaanggota.No', 'DESC')
-		 				->get();
-		 		foreach ($no as $no) {
-		 			$nomax = $no->No;
-		 		}
-		 		$newNo = $nomax + 1;
+		 		
 		 		$anggota = new Anggota;
 
-		 		$anggota->No        		 = $newNo;
 		 		$anggota->NamaAnggota        = Input::get('nama');
 			    $anggota->Alamat  		     = Input::get('alamat');
 			    $anggota->save();
